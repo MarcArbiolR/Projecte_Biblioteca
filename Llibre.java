@@ -7,4 +7,12 @@ public class Llibre {
         // boolean prestat: indica si el llibre està prestat o no
         private boolean prestat;
 
+    /* --- CONSTRUCTORS --- */
+    // Constructor per defecte
+        public Llibre(String titol, String autor) {
+            this.titol = titol;
+            this.autor = autor;
+            this.prestat = false;
+        }
 }
+
