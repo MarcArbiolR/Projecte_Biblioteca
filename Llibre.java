@@ -30,12 +30,22 @@ public class Llibre {
     public boolean esPrestat() {
         return prestat;
     }
+
     // Métode que fa que el llibre estigui prestat.
     public void prestar() {
         prestat = true;
     }
+
     // Métode que fa que el llibre no estigui prestat.
     public void retornar() {
         prestat = false;
+    }
+
+    /* --- MÉTODES REDEFINITS DE LA CLASSE OBJECT --- */
+    @Override
+    // Métode toString que retorna una cadena de text amb el títol, l'autor del
+    // llibre i si està prestat o no.
+    public String toString() {
+        return titol + " de " + autor + (prestat ? " (En préstec)" : " (Disponible)");
     }
 }
