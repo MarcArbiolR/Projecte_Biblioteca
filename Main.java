@@ -5,5 +5,9 @@ public class Main {
         Llibre llibre2 = new Llibre("El petit príncep", "Antoine de Saint-Exupéry");
         biblioteca.afegirLlibre(llibre1);
         biblioteca.afegirLlibre(llibre2);
+
+        Usuari usuari = new Usuari("Carla");
+        GestorBiblioteca gestor = new GestorBiblioteca();
+        gestor.prestarLlibre(usuari, llibre1);
     }
 }
