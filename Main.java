@@ -8,6 +8,18 @@ public class Main {
 
         Usuari usuari = new Usuari("Carla");
         GestorBiblioteca gestor = new GestorBiblioteca();
+        // Mostrar catàleg de llibres
+        System.out.println("Catàleg de llibres:");
+        for (Llibre l : biblioteca.getLlibres()) {
+            System.out.println(l);
+        }
+
+        // Fer un préstec
+        System.out.println("\nIntentant prestar '1984' a Carla...");
         gestor.prestarLlibre(usuari, llibre1);
+
+        // Mostrar llibres prestats per l'usuari
+        System.out.println("\nLlibres prestats per Carla:");
+        usuari.mostrarLlibresPrestats();
     }
 }
